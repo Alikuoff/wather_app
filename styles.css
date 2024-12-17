@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+  --gradient: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.25em;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border-radius: 20px;
+  box-shadow: 0 0 50px -10px rgb(255, 255, 255);
+  background-color: #1f1fe4;
+  color: #ffffff;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.location-container {
+  width: 100%;
+  padding: 20px 30px;
+  background: rgba(39, 72, 217, 0.1);
+}
+
+.location-container select {
+  color: #1f2227;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  background-image: var(--gradient);
+  font-weight: 700;
+  transition: transform 200ms ease;
+}
+
+.location-container select:hover {
+  transform: scale(0.95);
+}
+
+.weather-side {
+  position: relative;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1559963110-71b394e7494d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+}
+
+.weather-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: var(--gradient);
+  opacity: 0.8;
+}
+
+.date-container {
+  position: relative;
+  z-index: 1;
+}
+
+.date-dayname {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.date-day {
+  display: block;
+  font-size: 1em;
+}
+
+.location {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1em;
+}
+
+.weather-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.weather-icon {
+  height: 50px;
+  width: auto;
+}
+
+.weather-temp {
+  margin: 0;
+  font-weight: 700;
+  font-size: 3.5em;
+}
+
+.weather-desc { 
+  margin: 0;
+  font-size: 1em;
+}
+
+.info-side {
+  width: 100%;
+  background-color: #0d40e8;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+.today-info {
+  padding: 10px;
+  margin: 0 20px 20px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.today-info > div:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.today-info > div .title {
+  font-weight: 700;
+}
+
+.today-info > div .value {
+  float: right;
+}
+
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.forecast-days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daily-forecast-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d38;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  transition: transform 200ms ease;
+}
+
+.daily-forecast-item:hover {
+  transform: scale(1.05);
+}
+
+.daily-forecast-item h4 {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.daily-forecast-item img {
+  width: 35px;
+  height: 35px;
+}
+
+.daily-forecast-item p {
+  margin: 4px 0 0;
+  font-size: 0.9em;
+}
+
+.hourly-forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.hourly-forecast-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202086;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  transition: transform 200ms ease;
+}
+
+.hourly-forecast-item:hover {
+  transform: scale(1.05);
+}
+
+.hourly-forecast-item h4 {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.hourly-forecast-item img {
+  width: 25px;
+  height: 25px;
+}
+
+.hourly-forecast-item p {
+  margin: 4px 0 0;
+  font-size: 0.9em;
+}
+
+#toggle-temp {
+  background-color: #202086;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

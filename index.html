@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tashkent Weather</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="location-container">
+      <select id="city-select" class="location-button"></select>
+    </div>
+    <div class="weather-side">
+      <div class="weather-gradient"></div>
+      <div class="date-container">
+        <h2 class="date-dayname" id="day-name"></h2>
+        <span class="date-day" id="date"></span>
+        <i class="location-icon" data-feather="map-pin"></i>
+        <span class="location" id="location"></span>
+      </div>
+      <div class="weather-container">
+        <img id="condition-icon" class="weather-icon" src="" alt="Weather Icon">
+        <h1 class="weather-temp" id="temperature"></h1>
+        <h3 class="weather-desc" id="condition"></h3>
+      </div>
+    </div>
+    <div class="info-side">
+      <div class="today-info-container">
+        <div class="today-info">
+          <div class="precipitation">
+            <span class="title">PRECIPITATION</span>
+            <span class="value" id="precipitation"></span>
+            <div class="clear"></div>
+          </div>
+          <div class="humidity">
+            <span class="title">HUMIDITY</span>
+            <span class="value" id="humidity"></span>
+            <div class="clear"></div>
+          </div>
+          <div class="wind">
+            <span class="title">WIND</span>
+            <span class="value" id="wind"></span>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <button id="toggle-temp">Convert to Fahrenheit</button>
+    </div>
+    <div class="forecast-container">
+      <div class="forecast-days daily-forecast"></div>
+      <div class="hourly-forecast"></div>
+    </div>
+  </div>
+</body>
+</html>
